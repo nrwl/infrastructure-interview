@@ -69,13 +69,15 @@ Here are a few ideas you might consider if you want to go above and beyond:
 
 1. **Security Groups / NACLs**
    - Create and attach custom security groups or network ACLs to ensure fine-grained network control.
-   - This could be for
 
 2. **DNS and Route 53**
    - Configure internal DNS or host-based routing for your VPCs, possibly using a private hosted zone in Route 53.
 
 3. **VPC Endpoints**
    - Add a VPC endpoint (e.g., for S3 or DynamoDB) to demonstrate how private subnets can access AWS services without using a public IP.
+
+4. **Tags**
+   - Include a way to provide extra tags for the resources created, merge them with standard ones created by your module to enhance tracking resources.
 
 4. **Multi-Region Peering**
    - Configure the setup across different regions (if you really want to dive deeper), noting any special considerations.
@@ -86,7 +88,7 @@ Feel free to pick and choose any of these (or invent your own) if you’d like t
 
 ## Usage
 
-Below is a simplified example of how your module might be consumed (edit as needed):
+Below is a simplified example of one possible option for how the module could be consumed:
 
 ```hcl
 module "aws_vpc_peering" {
@@ -97,21 +99,15 @@ module "aws_vpc_peering" {
 
   vpc1_public_subnets = [
     { name = "vpc1-public-1", cidr_block = "10.0.1.0/24", availability_zone = "us-east-1a" },
-    { name = "vpc1-public-2", cidr_block = "10.0.2.0/24", availability_zone = "us-east-1b" }
+    { name = "vpc1-public-2", cidr_block = "10.0.2.0/24", availability_zone = "us-east-1b" },
+    { name = "vpc1-public-3", cidr_block = "10.0.3.0/24", availability_zone = "us-east-1c" }
   ]
 
   vpc1_private_subnets = [
-    { name = "vpc1-private-1", cidr_block = "10.0.3.0/24", availability_zone = "us-east-1a" },
-    { name = "vpc1-private-2", cidr_block = "10.0.4.0/24", availability_zone = "us-east-1b" }
+    { name = "vpc1-private-1", cidr_block = "10.0.4.0/24", availability_zone = "us-east-1a" },
+    { name = "vpc1-private-2", cidr_block = "10.0.5.0/24", availability_zone = "us-east-1b" },
+    { name = "vpc1-private-3", cidr_block = "10.0.6.0/24", availability_zone = "us-east-1c" }
   ]
 
-  vpc2_public_subnets = [
-    { name = "vpc2-public-1", cidr_block = "10.1.1.0/24", availability_zone = "us-east-1a" }
-  ]
-
-  vpc2_private_subnets = [
-    { name = "vpc2-private-1", cidr_block = "10.1.2.0/24", availability_zone = "us-east-1a" }
-  ]
-
-  # Additional variables as needed...
+  # Similar for vpc2, and additional variables as needed...
 }
