@@ -21,6 +21,21 @@ You can safely assume the following in the context of this challenge:
 
 - All projects are already present and part of the same organization, you would not need to create those
 - All secret values would be added later on after this module sets up the secrets and access
+- Inputs can be considered correct, you do not need to validate them in your module
+-
+
+---
+
+## Inputs
+
+At a minimum, your module should acept the following variables to execute:
+
+- The host project id
+- A list of projects that will be readin the secret in the host project
+- A list of secret names to create within the host project
+- A configured `google` provider 
+
+If you find other inputs help to accomplish the required tasks or allow for increased functionality you are free to add them.
 
 ---
 
