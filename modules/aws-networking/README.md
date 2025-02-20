@@ -34,7 +34,7 @@ You can safely assume the following in the context of this challene:
 
 ## Inputs
 
-At a minimum, your module should acceps the following variables to execute:
+At a minimum, your module should accept the following variables to execute:
 
 - The CIDR blocks of the two VPCs
 - The subnet definitions for each of the VPCs with the required information in the [Subnets](#subnets) section.
