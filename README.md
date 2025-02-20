@@ -13,6 +13,8 @@ You only need to complete **one** of these options—though you’re welcome to 
 
 ## Getting Started
 
+Please note: if you are not in the application process for an open infrastructure engineer posting for Nx, please **do not** submit anything for review. We are not accepting general submissions that are not tied to an application on an active job posting.
+
 1. **Copy This Repository**
    Please clone this repository into your own private version control system (e.g., a private GitHub repository). Once you’ve completed your work, invite the Nx team members specified in your interview instructions to review it.
 
