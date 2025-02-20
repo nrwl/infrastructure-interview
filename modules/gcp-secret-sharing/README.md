@@ -22,7 +22,6 @@ You can safely assume the following in the context of this challenge:
 - All projects are already present and part of the same organization, you would not need to create those
 - All secret values would be added later on after this module sets up the secrets and access
 - Inputs can be considered correct, you do not need to validate them in your module
--
 
 ---
 
