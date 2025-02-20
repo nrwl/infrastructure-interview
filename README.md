@@ -25,6 +25,10 @@ You only need to complete **one** of these options—though you’re welcome to 
 4. **Your Approach, Your Ideas**
    You have creative freedom here. We care about how you structure your code, manage resources, handle security, and organize your Terraform modules. We recommend approaching it as something you would then have to use regularly and maintain going forward.
 
+## Submitting Your Solution
+
+Once you're happy with your solution, invite @stevepentland and @pmariglia as collaborators so we can review your solution. In the next interview steps please be ready to discuss your solution, such as decisions made around structure, inputs & outputs, and so on. We're excited to learn more about how you approached this challenge.
+
 ## Notes & Guidelines
 
 - **Interview Process**: This exercise is part of the Nx hiring process. We appreciate the time and effort you’ll be investing.
